@@ -66,14 +66,14 @@ var lan_en = {
 
 var localStorage = window.localStorage;
 var lang = localStorage.getItem("lang");
-if (lang == null || lang == "") {
+if (lang == null || lang === "") {
     lang = navigator.language;
 } else {
 }
 console.log(lang);
 
 function lan(lan_switch) {
-    if (lan_switch == "zh-CN") {
+    if (lan_switch === "zh-CN") {
         lan_str = lan_cn;
         lang = "zh-CN";
         localStorage.setItem("lang", lang);
@@ -90,7 +90,7 @@ function lan(lan_switch) {
     }
 }
 
-document.getElementById('version').innerHTML = "Last Edit：2022.04.18";
+document.getElementById('version').innerHTML = "Last Edit：2022.07.30";
 
 function lan_dis() {
     window.scrollTo(0, 0);
